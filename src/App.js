@@ -6,11 +6,14 @@ import UseMemo from './UseMemo'
 import UseRef from './UseRef'
 import UseContext from './UseContext'
 import UseReducer from './UseReducer'
+import UseReducer2 from './UseReducer2'
 
 function App() {
 
   return (
     <div>
+      <UseReducer2 />
+      <p>______________________________________________</p>
       <UseReducer />
       <p>______________________________________________</p>
       <UseContext />
