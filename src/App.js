@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Counter from './Counter'
+import UseEffect from './UseEffect'
+import UseEffect2 from './UseEffect2'
+import UseMemo from './UseMemo'
+import UseRef from './UseRef'
+import UseContext from './UseContext'
+import UseReducer from './UseReducer'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UseReducer />
+      <p>______________________________________________</p>
+      <UseContext />
+      <p>______________________________________________</p>
+      <UseRef />
+      <p>______________________________________________</p>
+      <UseMemo />
+      <p>______________________________________________</p>
+      <UseEffect2 />
+      <p>______________________________________________</p>
+      <UseEffect />
+      <p>______________________________________________</p>
+      <Counter />
+      <p>______________________________________________</p>
     </div>
   );
 }
