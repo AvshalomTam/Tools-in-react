@@ -7,11 +7,13 @@ import UseRef from './UseRef'
 import UseContext from './UseContext'
 import UseReducer from './UseReducer'
 import UseReducer2 from './UseReducer2'
-
+import UseCallback from './UseCallback'
 function App() {
 
   return (
     <div>
+      <UseCallback />
+      <p>______________________________________________</p>
       <UseReducer2 />
       <p>______________________________________________</p>
       <UseReducer />
