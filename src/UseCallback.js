@@ -1,6 +1,5 @@
 import React, {useState, useCallback} from 'react'
 import List from './List'
-import list from './List'
 
 export default function UseCallback() {
 

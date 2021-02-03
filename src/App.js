@@ -8,10 +8,14 @@ import UseContext from './UseContext'
 import UseReducer from './UseReducer'
 import UseReducer2 from './UseReducer2'
 import UseCallback from './UseCallback'
+import ExampleToUseLocalStorage from './ExampleToUseLocalStorage'
+
 function App() {
 
   return (
     <div>
+      <ExampleToUseLocalStorage />
+      <p>______________________________________________</p>
       <UseCallback />
       <p>______________________________________________</p>
       <UseReducer2 />
