@@ -36,17 +36,26 @@ function newTodo(name) {
 export default function UseReducer() {
     const [ todos, dispatch ] = useReducer(reducer, [] )
     const [ name, setName ] = useState('')
+    const [ message, setMessage ] = useState('')
   
     function handleSubmit(e) {
         e.preventDefault()
-      dispatch({type: ACTIONS.ADD_TODO, payload: { name: name }})
-      setName('')
+        if (name === '') {
+            setMessage('Please insert todo before submittion')
+            return
+        }
+        setMessage('')
+        dispatch({type: ACTIONS.ADD_TODO, payload: { name: name }})
+        setName('')
     }
 
     return (
         <div>
         <form onSubmit={handleSubmit}>
             <input type="text" value={name} onChange={e => setName(e.target.value)} />
+            <button type="submit">Submit</button>
+            <br></br>
+            <p>{message}</p>
         </form>
         {todos.map(todo => { 
             return <Todo key={todo.id} todo={todo} dispatch={dispatch}/> 
